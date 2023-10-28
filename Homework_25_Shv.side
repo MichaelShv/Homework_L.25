@@ -1,0 +1,389 @@
+{
+  "id": "0e0c4dbf-1c92-4e8b-a772-c08e6316014b",
+  "version": "2.0",
+  "name": "Homework",
+  "url": "https://store.steampowered.com",
+  "tests": [{
+    "id": "1bb80134-3e27-4d3c-8fb7-afa9c61690f1",
+    "name": "Steam Store - Search",
+    "commands": [{
+      "id": "69fdeb66-afdf-4800-8bc2-870dad20340a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14e850fd-740a-4b01-92fb-d862ee34ab22",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a56784f-029d-445b-9852-fbd44d5dcbc4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='store_nav_search_term']",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed0a070f-4ee1-41e3-8ce2-03e3eda1df8e",
+      "comment": "",
+      "command": "type",
+      "target": "id=store_nav_search_term",
+      "targets": [
+        ["id=store_nav_search_term", "id"],
+        ["name=term", "name"],
+        ["css=#store_nav_search_term", "css:finder"],
+        ["xpath=//input[@id='store_nav_search_term']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "tekken"
+    }, {
+      "id": "a2aaaed5-4033-4b09-89fd-ba67f3949788",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@id='store_search_link']/img",
+      "targets": [
+        ["css=#store_search_link > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://store.akamai.steamstatic.com/public/images/blank.gif')]", "xpath:img"],
+        ["xpath=//a[@id='store_search_link']/img", "xpath:idRelative"],
+        ["xpath=//form/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07e095a6-f6f9-480b-b750-6cde8e531c89",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.search_result_row:nth-child(1) .title",
+      "targets": [],
+      "value": "tekken"
+    }]
+  }, {
+    "id": "1165f7c0-844b-4548-800e-ef1c2eed78c7",
+    "name": "Steam Store - Cart (Add + Remove)",
+    "commands": [{
+      "id": "9bd679d6-1179-4412-a918-88316b738062",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddc6a801-221e-4ab3-afbb-5d237a08c00c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eab15052-f5fa-4a40-a412-2561faba301b",
+      "comment": "",
+      "command": "click",
+      "target": "id=delayedimage_home_tabs_autoload_0",
+      "targets": [
+        ["id=delayedimage_home_tabs_autoload_0", "id"],
+        ["css=#delayedimage_home_tabs_autoload_0", "css:finder"],
+        ["xpath=//img[contains(@src,'https://cdn.akamai.steamstatic.com/steam/apps/2144740/capsule_184x69.jpg?t=1698438025')]", "xpath:img"],
+        ["xpath=//img[@id='delayedimage_home_tabs_autoload_0']", "xpath:attributes"],
+        ["xpath=//div[@id='tab_newreleases_content']/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[21]/div/div/div[2]/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d2875ef-6c14-4283-803e-aa79145faa82",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,853)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95312ce2-a5c6-4d48-9c7e-8ea150f40183",
+      "comment": "",
+      "command": "click",
+      "target": "css=#btn_add_to_cart_767206 > span",
+      "targets": [
+        ["css=#btn_add_to_cart_767206 > span", "css:finder"],
+        ["xpath=//a[@id='btn_add_to_cart_767206']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'In Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23d40429-7a34-4824-ba04-da8bb17134ef",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//div[@id='cart_estimated_total_text']",
+      "targets": [
+        ["id=cart_estimated_total_text", "id"],
+        ["css=#cart_estimated_total_text", "css:finder"],
+        ["xpath=//div[@id='cart_estimated_total_text']", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div/div[2]/div[3]/div/div[3]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": "Estimated total1"
+    }, {
+      "id": "6bedf574-954b-4640-8b44-5d32232eec09",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Remove",
+      "targets": [
+        ["linkText=Remove", "linkText"],
+        ["css=.remove_link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Remove')]", "xpath:link"],
+        ["xpath=//div[@id='cart_row_4629196971280208988']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:removeFromCart('4629196971280208988')\")]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e8a9467-1ae8-4c39-854a-0b252ba35b17",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.cart_status_message",
+      "targets": [],
+      "value": "removed"
+    }]
+  }, {
+    "id": "e6237272-ac74-4fcd-bdab-79670c986103",
+    "name": "Steam Store - Is Demo present",
+    "commands": [{
+      "id": "4f1b63ea-ecfe-4bc1-bdf4-7c98cea4d69c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "844e926c-3ec4-4cac-abc0-822e4307fa50",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f358fe58-b5a4-42ab-ad0b-be162d7a5c23",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='genre_tab']/span",
+      "targets": [
+        ["css=#genre_tab > .pulldown", "css:finder"],
+        ["xpath=//div[@id='genre_tab']/span", "xpath:idRelative"],
+        ["xpath=//div[6]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ce2990e-b40c-40f2-9a29-7b92a4a28e82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup_menu_item:nth-child(3) > span",
+      "targets": [
+        ["css=.popup_menu_item:nth-child(3) > span", "css:finder"],
+        ["xpath=//div[@id='genre_flyout']/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Demos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e810386-e7c6-452e-8d82-a0ccaa375308",
+      "comment": "",
+      "command": "click",
+      "target": "css=.slide___3-Nqo:nth-child(1) .salepreviewwidgets_CapsuleImage_cODQh:nth-child(1)",
+      "targets": [
+        ["css=.slide___3-Nqo:nth-child(1) .salepreviewwidgets_CapsuleImage_cODQh:nth-child(1)", "css:finder"],
+        ["xpath=//img[@alt='Half Sword']", "xpath:img"],
+        ["xpath=//div[@id='SaleSection_40558']/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/a/div[3]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf57f64e-c1ba-4689-a08e-6014070d2288",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.game_area_purchase_game > h1",
+      "targets": [
+        ["css=.game_area_purchase_game > h1", "css:finder"],
+        ["xpath=//div[@id='game_area_purchase']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Download Japanese Drift Master Demo')]", "xpath:innerText"]
+      ],
+      "value": "Download demo"
+    }]
+  }, {
+    "id": "5adbe865-c25a-451b-9c40-8d59f3c780fb",
+    "name": "Steam Store - Login Elements",
+    "commands": [{
+      "id": "1c2860af-8cb8-41e7-9f82-7ea2f26880b8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fef835fa-8700-4bae-aa61-93816e7dc546",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x792",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "655fe5cb-6668-48ad-a2d1-a6595131b64d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(text(),'login')]",
+      "targets": [
+        ["linkText=login", "linkText"],
+        ["css=.global_action_link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'login')]", "xpath:link"],
+        ["xpath=//div[@id='global_action_menu']/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c051049-04b7-4ebe-a710-eb5bdc0572ab",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'login')]",
+      "targets": [
+        ["linkText=login", "linkText"],
+        ["css=.global_action_link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'login')]", "xpath:link"],
+        ["xpath=//div[@id='global_action_menu']/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e1fd935-4cf4-4e86-98df-31ec5bfa31bf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.newlogindialog_TextField_2KXGK > .newlogindialog_Highlight_XyqzE",
+      "targets": [
+        ["css=.newlogindialog_TextField_2KXGK > .newlogindialog_Highlight_XyqzE", "css:finder"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": "SIGN IN WITH ACCOUNT NAME"
+    }, {
+      "id": "c60a69b8-148c-4846-a3f2-b173f666981f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@value='']",
+      "targets": [
+        ["css=.newlogindialog_TextField_2KXGK:nth-child(1) > .newlogindialog_TextInput_2eKVn", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bf0adda-7ff5-4a7a-8835-8044c202ba62",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.newlogindialog_TextField_2KXGK:nth-child(2) > .newlogindialog_FieldLabel_3d8dp",
+      "targets": [
+        ["css=.newlogindialog_TextField_2KXGK:nth-child(2) > .newlogindialog_FieldLabel_3d8dp", "css:finder"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[2]/div", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div", "xpath:position"]
+      ],
+      "value": "PASSWORD"
+    }, {
+      "id": "49c0019e-6bc7-4549-9e2d-3345990dc41e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//form/div[3]/div/div",
+      "targets": [
+        ["css=.newlogindialog_Checkbox_3tTFg", "css:finder"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//form/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a97aab60-7735-4d65-896d-941f8362a076",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.newlogindialog_CheckboxFieldLabel_2yrCY",
+      "targets": [
+        ["css=.newlogindialog_CheckboxFieldLabel_2yrCY", "css:finder"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[3]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Remember me"
+    }, {
+      "id": "8dea7f8b-c57d-4f4b-b1c5-b3b6d4d9ead3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.newlogindialog_SubmitButton_2QgFE", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a381959d-10af-422d-9655-43a8f6dc6b76",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.newlogindialog_SubmitButton_2QgFE",
+      "targets": [
+        ["css=.newlogindialog_SubmitButton_2QgFE", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": "Sign in"
+    }, {
+      "id": "a73ee0b0-51c8-42e7-af2d-886777d9d1b3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(@href, 'https://help.steampowered.com/wizard/HelpWithLogin?redir=https%3A%2F%2Fstore.steampowered.com%2Flogin%2F%3Fredir%3D%26redir_ssl%3D1%26snr%3D1_4_4__global-header')]",
+      "targets": [
+        ["linkText=Help, I can't sign in", "linkText"],
+        ["css=.newlogindialog_TextLink_1cnUQ:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://help.steampowered.com/wizard/HelpWithLogin?redir=https%3A%2F%2Fstore.steampowered.com%2Flogin%2F%3Fredir%3D%26redir_ssl%3D1%26snr%3D1_4_4__global-header')]", "xpath:href"],
+        ["xpath=//form/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "593f0389-6667-4883-8851-f7fc6dfc4d1f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.newlogindialog_TextLink_1cnUQ:nth-child(6)",
+      "targets": [
+        ["linkText=Help, I can't sign in", "linkText"],
+        ["css=.newlogindialog_TextLink_1cnUQ:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='responsive_page_template_content']/div[3]/div/div/div/div/div[2]/div/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://help.steampowered.com/wizard/HelpWithLogin?redir=https%3A%2F%2Fstore.steampowered.com%2Flogin%2F%3Fredir%3D%26redir_ssl%3D1%26snr%3D1_4_4__global-header')]", "xpath:href"],
+        ["xpath=//form/a", "xpath:position"]
+      ],
+      "value": "Help, I can't sign in"
+    }]
+  }],
+  "suites": [{
+    "id": "409cab3e-28cc-4c35-9019-7e4c5be72952",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://store.steampowered.com/"],
+  "plugins": []
+}
